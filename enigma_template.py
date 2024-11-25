@@ -55,7 +55,7 @@ def decode_file():
             msg_char = alphabet[(alphabet.index(char) - key) % 26] # takes each char and shifts them backwards by the key amount
             output += msg_char # this just adds the encoded text to output
         print(f"{msg} now been DECODED to {output}")# this prints the decoded message
-        fileyn = input("would you like to DECODE this message into a file?").lower()
+        fileyn = input("would you like to make this DECODED message into a file?").lower()
         if fileyn == "yes":
             filename = input("what you wanna name it?")
             f = open(f"{filename}.txt", "w")
@@ -71,15 +71,11 @@ def decode_unknown_key(filename):
     for key in range(26):
         output = ""
         for char in msg:
-            msg_char = alphabet[
-                (alphabet.index(char) - key) % 26]  # takes each char and shifts them backwards by the key amount
+            msg_char = alphabet[(alphabet.index(char) - key) % 26]  # takes each char and shifts them backwards by the key amount
             output += msg_char  # this just adds the encoded text to output
-        print(f"{msg} now been DECODED to {output}+{key}")  # this prints the decoded message
-    fileyn = int(input("which key is right?")).lower()
-        filename = input("what you wanna name it?")
-        f = open(f"{filename}.txt", "w")
-        f.write(output)
-        f.close()
+        print(f"Am I the Right Key???   {output} + {key}")  # this prints the decoded message
+    print("find the KEY!!!")
+    f.close()
 
 
 # main method declaration
